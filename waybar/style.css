@@ -8,9 +8,10 @@
 window#waybar {
     background: rgba(26, 27, 38, 0.75);
     color: #c0caf5;
-    font-family: 
-        SpaceMono Nerd Font,
-        feather;
+    font-family:
+        "polycat",
+        "SpaceMono Nerd Font",
+        "feather";
     transition: background-color .5s;
 }
 
