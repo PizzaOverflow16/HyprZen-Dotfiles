@@ -116,6 +116,50 @@ if [[ "$OMARCHY_EXISTS" == false && "$OS" == "linux" && -d "$DOTFILES_DIR/waybar
   create_symlink "$DOTFILES_DIR/waybar" "$HOME/.config/waybar" "Waybar config"
 fi
 
+# --- NUEVAS CONFIGURACIONES DEL ECOSISTEMA HYPRZEN ---
+
+# Matugen (Motor de temas)
+if [[ "$OS" == "linux" && -d "$DOTFILES_DIR/matugen" ]]; then
+  create_symlink "$DOTFILES_DIR/matugen" "$HOME/.config/matugen" "Matugen dynamic theming"
+fi
+
+# Rofi (Lanzador y Menús)
+if [[ "$OS" == "linux" && -d "$DOTFILES_DIR/rofi" ]]; then
+  create_symlink "$DOTFILES_DIR/rofi" "$HOME/.config/rofi" "Rofi launcher config"
+fi
+
+# SwayNC (Notificaciones)
+if [[ "$OS" == "linux" && -d "$DOTFILES_DIR/swaync" ]]; then
+  create_symlink "$DOTFILES_DIR/swaync" "$HOME/.config/swaync" "SwayNC notification center"
+fi
+
+# Wlogout (Menú de apagado)
+if [[ "$OS" == "linux" && -d "$DOTFILES_DIR/wlogout" ]]; then
+  create_symlink "$DOTFILES_DIR/wlogout" "$HOME/.config/wlogout" "Wlogout power menu"
+fi
+
+# GTK4 (Estilo de ventanas cristalino)
+if [[ "$OS" == "linux" && -d "$DOTFILES_DIR/gtk-4.0" ]]; then
+  create_symlink "$DOTFILES_DIR/gtk-4.0" "$HOME/.config/gtk-4.0" "GTK4 styling"
+fi
+
+# Kwybars y NetworkManager
+if [[ "$OS" == "linux" && -d "$DOTFILES_DIR/kwybars" ]]; then
+  create_symlink "$DOTFILES_DIR/kwybars" "$HOME/.config/kwybars" "Kwybars config"
+fi
+if [[ "$OS" == "linux" && -d "$DOTFILES_DIR/networkmanager-dmenu" ]]; then
+  create_symlink "$DOTFILES_DIR/networkmanager-dmenu" "$HOME/.config/networkmanager-dmenu" "NetworkManager Dmenu"
+fi
+
+# Dar permisos de ejecución a la carpeta scripts (Python y Bash)
+if [[ -d "$DOTFILES_DIR/scripts" ]]; then
+  echo -e "\n${BLUE}🔧 Asegurando permisos para scripts personalizados...${NC}"
+  chmod +x "$DOTFILES_DIR/scripts/"*.sh 2>/dev/null || true
+  chmod +x "$DOTFILES_DIR/scripts/"*.py 2>/dev/null || true
+  echo -e "${GREEN}  ✓ Permisos de scripts actualizados${NC}"
+fi
+# --------------------------------------------------------
+
 # Wofi launcher (Linux only)
 if [[ "$OMARCHY_EXISTS" == false && "$OS" == "linux" && -d "$DOTFILES_DIR/wofi" ]]; then
   create_symlink "$DOTFILES_DIR/wofi" "$HOME/.config/wofi" "Wofi launcher config"
