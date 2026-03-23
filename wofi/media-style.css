@@ -1,0 +1,54 @@
+window {
+    margin: 0px;
+    border: 2px solid rgba(65, 53, 115, 0.8); /* Borde morado oscuro */
+    background-color: rgba(26, 27, 38, 0.95); /* Fondo oscuro Tokyo Night */
+    border-radius: 15px;
+}
+
+#input {
+    margin: 10px;
+    border: none;
+    color: #c0caf5;
+    background-color: transparent;
+    font-family: "Fira Sans Semibold", sans-serif;
+    font-size: 14px;
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #a9b1d6;
+    font-family: "SpaceMono Nerd Font", sans-serif;
+    font-size: 16px;
+}
+
+#entry {
+    padding: 5px;
+}
+
+#entry:selected {
+    background-color: rgba(187, 154, 247, 0.2);
+    border-radius: 10px;
+}
+
+#text:selected {
+    color: #bb9af7;
+    font-weight: bold;
+}

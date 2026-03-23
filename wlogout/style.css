@@ -1,0 +1,68 @@
+/* Importamos la magia de Matugen */
+@import "/home/hyperZen/.config/matugen/output/colors.css";
+
+/* Fondo oscuro de la pantalla completa (Cristal dinámico) */
+window {
+    font-family: "GeistMono Nerd Font Propo";
+    font-size: 16pt;
+    color: @foreground;
+    background-color: alpha(@background, 0.65);
+}
+
+/* BOTONES */
+button {
+    background-repeat: no-repeat;
+    background-position: center 25%;
+    background-size: 20%;
+    background-color: transparent;
+    transition: all 0.3s ease-in;
+    box-shadow: 0 0 10px 2px transparent;
+    border-radius: 36px;
+    margin: 75px 10px;
+    min-width: 50px;
+    min-height: 50px;
+    padding: 20px;
+    border: none;
+}
+
+/* TEXTO DE LOS BOTONES */
+label {
+    color: @foreground;
+    font-size: 12pt;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+/* FOCUS */
+button:focus {
+    box-shadow: none;
+    outline-style: none;
+    background-size: 20%;
+}
+
+/* HOVER (El rebote con color de acento dinámico) */
+button:hover {
+    background-size: 50%;
+    outline-style: none;
+    box-shadow: 0 0 15px 5px alpha(@main_color, 0.4);
+    /* Usamos el color principal de Matugen con transparencia */
+    background-color: alpha(@main_color, 0.5); 
+    transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682),
+    box-shadow 0.5s ease-in;
+}
+
+/* --- RUTAS DE LOS ICONOS --- */
+#shutdown { background-image: image(url("./icons/power.png")); }
+#shutdown:hover { background-image: image(url("./icons/power-hover.png")); }
+
+#logout { background-image: image(url("./icons/logout.png")); }
+#logout:hover { background-image: image(url("./icons/logout-hover.png")); }
+
+#reboot { background-image: image(url("./icons/restart.png")); }
+#reboot:hover { background-image: image(url("./icons/restart-hover.png")); }
+
+#lock { background-image: image(url("./icons/lock.png")); }
+#lock:hover { background-image: image(url("./icons/lock-hover.png")); }
+
+#sleep { background-image: image(url("./icons/hibernate.png")); }
+#sleep:hover { background-image: image(url("./icons/hibernate-hover.png")); }

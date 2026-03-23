@@ -1,0 +1,41 @@
+ /* 1. LA CAPA BASE (El único cristal morado del 85%) */
+
+window.background,
+
+window.background.csd,
+
+window.solid-csd {
+
+background-color: rgba(26, 27, 38, 0.85);
+
+}
+
+
+/* 2. PANEL LATERAL Y BARRA SUPERIOR */
+
+.navigation-sidebar {
+
+background-color: rgba(22, 22, 30, 0.88);
+
+}
+
+headerbar {
+
+background-color: rgba(26, 27, 38, 0.90);
+
+}
+
+
+/* 3. EL TRUCO: Todas las vistas internas DEBEN ser transparentes para no encimarse */
+
+view, textview, iconview,
+
+gridview, listview, columnview,
+
+scrolledwindow, stack, flap,
+
+.view, .content {
+
+background-color: transparent;
+
+} 

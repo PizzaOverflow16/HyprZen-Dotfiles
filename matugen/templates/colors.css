@@ -1,0 +1,6 @@
+@define-color background {{colors.background.default.hex}};
+@define-color foreground {{colors.on_background.default.hex}};
+@define-color main_color {{colors.primary.default.hex}};
+@define-color accent_color {{colors.secondary.default.hex}};
+@define-color border_color {{colors.outline.default.hex}};
+@define-color tinted_bg {{colors.primary_container.default.hex}};

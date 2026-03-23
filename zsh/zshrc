@@ -1,14 +1,62 @@
-export CONFIG_PATH=$HOME/dev/config/dotfiles
+ # ==========================
 
-# if system is mac load mac specific zshrc
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  source "$CONFIG_PATH/zsh/zshrc.mac"
-fi
+# Configuración del Historial
 
-# if system is linux load linux specific zshrc
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  source "$CONFIG_PATH/zsh/zshrc.linux"
-fi
+# ==========================
 
-# Load aliases
-source "$CONFIG_PATH/zsh/zshrc.alias"
+HISTFILE=~/.zsh_history      # Archivo oculto donde se guardará todo
+
+HISTSIZE=10000               # Límite de comandos en la memoria actual
+
+SAVEHIST=10000               # Límite de comandos guardados en el archivo
+
+
+# Opciones de comportamiento del historial
+
+setopt appendhistory         # Añade al historial en vez de sobrescribirlo
+
+setopt sharehistory          # Comparte el historial entre todas las ventanas de Kitty abiertas
+
+setopt inc_append_history    # Guarda el comando inmediatamente después de darle Enter
+
+setopt hist_ignore_all_dups  # No guarda comandos repetidos (ej. si escribes "clear" 5 veces, solo lo guarda una)
+
+
+# Cargar el prompt Starship
+
+eval "$(starship init zsh)"
+
+
+# Cargar los plugins nativos de Arch
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Mis Aliases
+
+alias ls='ls --color=auto'
+
+alias grep='grep --color=auto'
+
+
+# Limpiar terminal y mostrar Fastfetch al iniciar
+
+clear
+
+# Array con las rutas de tus configuraciones
+
+configs=(
+
+    "$HOME/.config/fastfetch/config.jsonc"
+
+    "$HOME/.config/fastfetch/Config2.jsonc"
+
+)
+
+
+# Elegir una al azar y ejecutarla
+
+fastfetch -c "${configs[$((RANDOM % ${#configs[@]} + 1))]}"
+
+alias newsurge='yay -S surge-bin' 

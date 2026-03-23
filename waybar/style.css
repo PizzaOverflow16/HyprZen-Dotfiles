@@ -1,17 +1,18 @@
+@import "/home/hyperZen/.config/matugen/output/colors.css";
 * {
-    /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
-    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    transition: background-color .3s ease-out;
+/* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
+font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+font-size: 15px;
+transition: background-color .3s ease-out;
 }
 
 window#waybar {
-    background: rgba(26, 27, 38, 0.75);
-    color: #c0caf5;
+    background: transparent;
+    color: @foreground;
     font-family:
-        "polycat",
-        "SpaceMono Nerd Font",
-        "feather";
+    "polycat",
+    "SpaceMono Nerd Font",
+    "feather";
     transition: background-color .5s;
 }
 
@@ -19,7 +20,7 @@ window#waybar {
 .modules-center,
 .modules-right
 {
-    background: rgba(0, 0, 8, .7);
+    background: alpha(@tinted_bg, 0.85);
     margin: 5px 5px;
     padding: 0 5px;
     border-radius: 15px;
@@ -31,70 +32,42 @@ window#waybar {
     padding: 0 10px;
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#language,
-#mpd {
+#clock, #battery, #cpu, #memory, #disk, #temperature,
+#backlight, #network, #pulseaudio, #wireplumber,
+#custom-media, #tray, #mode, #idle_inhibitor, #scratchpad,
+#power-profiles-daemon, #language, #mpd {
     padding: 0 5px;
     border-radius: 15px;
 }
 
-#clock:hover,
-#battery:hover,
-#cpu:hover,
-#memory:hover,
-#disk:hover,
-#temperature:hover,
-#backlight:hover,
-#network:hover,
-#pulseaudio:hover,
-#wireplumber:hover,
-#custom-media:hover,
-#tray:hover,
-#mode:hover,
-#idle_inhibitor:hover,
-#scratchpad:hover,
-#power-profiles-daemon:hover,
-#language:hover,
-#mpd:hover {
-    background: rgba(26, 27, 38, 0.9);
+#clock:hover, #battery:hover, #cpu:hover, #memory:hover,
+#disk:hover, #temperature:hover, #backlight:hover, #network:hover,
+#pulseaudio:hover, #wireplumber:hover, #custom-media:hover,
+#tray:hover, #mode:hover, #idle_inhibitor:hover, #scratchpad:hover,
+#power-profiles-daemon:hover, #language:hover, #mpd:hover {
+    background: alpha(@main_color, 0.3);
+    border-radius: 15px;
 }
 
-
 #workspaces button {
-  background: transparent;
-  font-family:
-    SpaceMono Nerd Font,
-    feather;
-  font-weight: 900;
-  font-size: 13pt;
-  color: #c0caf5;
-  border:none;
-  border-radius: 15px;
+    background: transparent;
+    font-family: SpaceMono Nerd Font, feather;
+    font-weight: 900;
+    font-size: 13pt;
+    color: @foreground;
+    border:none;
+    border-radius: 15px;
 }
 
 #workspaces button.active {
-    background: #313134; 
+    background: alpha(@main_color, 0.5);
+    color: @foreground;
 }
 
 #workspaces button:hover {
-  background: #11111b;
-  color: #cdd6f4;
-  box-shadow: none;
+    background: alpha(@accent_color, 0.6);
+    color: @background;
+    box-shadow: none;
 }
 
 #custom-arch {
@@ -104,5 +77,88 @@ window#waybar {
     transition: color .5s;
 }
 #custom-arch:hover {
-    color: #1793d1;
+    color: @main_color;
+}
+
+/* Configuración específica para Polycat */
+#custom-polycat {
+    font-family: "polycat", "SpaceMono Nerd Font";
+    font-size: 22px;
+    padding: 0 10px;
+    color: @foreground;
+    font-weight: bold;
+}
+
+#custom-polycat:hover {
+    background: alpha(@main_color, 0.3);
+    border-radius: 15px;
+}
+#custom-power, #pulseaudio-slider {
+    padding: 0 10px;
+    border-radius: 15px;
+}
+
+#custom-power:hover {
+    background: alpha(@main_color, 0.3);
+}
+
+#custom-moonveil {
+    color: @accent_color;
+    font-size: 14pt;
+    padding: 0 12px;
+    margin-right: 6px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+#custom-moonveil:hover {
+    background-color: alpha(@accent_color, 0.2);
+    color: @foreground;
+}
+
+#custom-moonveil.notification {
+    color: #f7768e; /* Alerta visual intacta */
+}
+
+#mpris {
+    font-family: "SpaceMono Nerd Font", sans-serif;
+    color: @foreground;
+    font-size: 14px;
+    padding: 0 10px;
+    margin: 0 5px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+#mpris.playing {
+    color: @main_color;
+}
+
+#mpris.paused {
+    color: @border_color;
+}
+
+#mpris:hover {
+    background: alpha(@main_color, 0.3);
+}
+
+@keyframes blink {
+    0% { opacity: 1; color: #f7768e; }
+    50% { opacity: 0.3; color: @foreground; }
+    100% { opacity: 1; color: #f7768e; }
+}
+
+#battery.warning:not(.charging) {
+    color: #e0af68;
+}
+
+#battery.critical:not(.charging) {
+    color: #f7768e;
+    animation: blink 2s linear infinite;
+}
+
+#custom-sep {
+    color: @border_color;
+    font-size: 16px;
+    padding: 0 5px;
 }

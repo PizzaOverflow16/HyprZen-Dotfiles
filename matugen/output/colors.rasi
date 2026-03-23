@@ -1,0 +1,19 @@
+* {
+    /* Fondo general oscuro con 70% de opacidad (B3) */
+    m-bg: #101418b3;
+    
+    /* Fondo del elemento seleccionado con 30% de opacidad (4D) */
+    m-bg-selected: #9bcbfa4d;
+    
+    /* Texto principal (sólido) */
+    m-fg: #e0e2e8;
+    
+    /* Color de acento (sólido) */
+    m-accent: #9bcbfa;
+    
+    /* Fondo de la barra de búsqueda con 50% de opacidad (80) */
+    m-input-bg: #42474e80;
+    
+    /* Color del texto fantasma "Search..." con 30% de opacidad (4D) */
+    m-placeholder: #e0e2e84d;
+}

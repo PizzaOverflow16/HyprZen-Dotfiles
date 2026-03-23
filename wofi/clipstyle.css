@@ -53,7 +53,7 @@
 
 * {
   font-family: 'CaskaydiaCove Nerd Font', monospace;
-  font-size: 18px;
+  font-size: 13px; /* Solo aquí cambiamos el tamaño */
 }
 
 /* Window */
@@ -62,7 +62,7 @@ window {
   padding: 10px;
   border: 2px solid @lavender;
   border-radius: 12px;
-  background-color: rgba(30, 30, 46, 0.6);
+  background-color: alpha(@base, 0.7);
 }
 
 /* Inner Box */

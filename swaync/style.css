@@ -1,0 +1,36 @@
+@import "/home/hyperZen/.config/matugen/output/colors.css";
+
+/* El Centro de Control Principal */
+.control-center {
+    /* Fondo oscuro transparente, igual que tu Waybar */
+    background: alpha(@background, 0.95);
+    border: 2px solid @border_color;
+    border-radius: 15px;
+    color: @foreground;
+    padding: 20px;
+}
+
+/* Título de los widgets */
+.widget-title > label { 
+    font-size: 1.5rem; 
+    color: @main_color; 
+}
+
+/* Botones del centro de control (Wifi, Bluetooth, etc.) */
+.widget-buttons-grid > button {
+    /* Fondo del botón tintado y semitransparente */
+    background: alpha(@tinted_bg, 0.5);
+    border: 1px solid alpha(@border_color, 0.3);
+    color: @foreground;
+    border-radius: 12px;
+    margin: 5px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Al pasar el mouse por encima de los botones */
+.widget-buttons-grid > button:hover {
+    background: @main_color;
+    color: @background;
+    border: 1px solid @main_color;
+}

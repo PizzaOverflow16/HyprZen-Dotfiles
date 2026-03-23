@@ -1,0 +1,30 @@
+{
+  "$schema": "/etc/swaync/config.schema.json",
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "timeout": 4,
+  "control-center-margin-top": 10,
+  "control-center-margin-bottom": 10,
+  "control-center-margin-right": 10,
+  "control-center-width": 400,
+  "widgets": [
+    "label",
+    "buttons-grid",
+    "mpris",
+    "title",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": { "text": "Notificaciones", "clear-all-button": true },
+    "label": { "max-lines": 1, "text": "Centro de Control" },
+    "buttons-grid": {
+      "actions": [
+        { "label": "󰖩", "command": "nm-connection-editor" },
+        { "label": "󰂯", "command": "blueman-manager" },
+        { "label": "󰕾", "command": "pavucontrol" },
+        { "label": "󰅶", "command": "swaync-client -d -sw" }
+      ]
+    }
+  }
+}

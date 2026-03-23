@@ -56,83 +56,66 @@
   font-size: 18px;
 }
 
-/* Window */
+/* Window - El diseño ancho y redondeado tipo Rofi */
 window {
   margin: 0px;
-  padding: 10px;
-  border: 2px solid @lavender;
+  border: 2px solid @mauve; /* Tu tono morado Catppuccin */
   border-radius: 12px;
-  background-color: rgba(30, 30, 46, 0.6);
+  background-color: alpha(@base, 0.7); /* Fondo oscuro semitransparente */
 }
 
-/* Inner Box */
+/* Limpiamos las cajas internas para que se vea moderno */
 #inner-box {
-  margin: 5px;
-  padding: 10px;
-  border: none;
-  background-color: @base;
+margin: 10px;
+border: none;
+background-color: transparent;
 }
-
-/* Outer Box */
 #outer-box {
-  margin: 5px;
-  padding: 10px;
-  border: none;
-  background-color: @base;
+margin: 10px;
+border: none;
+background-color: transparent;
 }
-
-/* Scroll */
 #scroll {
-  margin: 0px;
-  padding: 10px;
-  border: none;
-  background-color: @base;
+margin: 0px;
+border: none;
+background-color: transparent;
 }
 
-/* Input */
+/* La barra de búsqueda */
 #input {
-  margin: 5px 20px;
-  padding: 10px;
-  border: none;
-  border-radius: 0.1em;
-  color: @text;
-  background-color: @base;
+margin: 15px;
+padding: 10px;
+border: none;
+border-radius: 10px;
+color: @text;
+background-color: alpha(@surface0, 0.5); /* Cajita sutil */
 }
 
 #input image {
-    border: none;
-    color: @red;
+color: @mauve;
 }
 
-#input * {
-  outline: 4px solid @red !important;
-}
-
-/* Text */
+/* Las letras normales */
 #text {
-  margin: 5px;
-  border: none;
-  color: @text;
+margin: 5px;
+border: none;
+color: @subtext1;
 }
 
+/* La caja de cada aplicación */
 #entry {
-  background-color: @base;
+padding: 10px;
+border-radius: 10px;
+background-color: transparent;
 }
 
-#entry arrow {
-  border: none;
-  color: @lavender;
-}
-
-/* Selected Entry */
+/* El efecto al pasar el mouse o seleccionar una app */
 #entry:selected {
-  border: 0.11em solid @lavender;
+background-color: @mauve; /* Fondo totalmente morado */
+border: none;
 }
 
 #entry:selected #text {
-  color: @mauve;
-}
-
-#entry:drop(active) {
-  background-color: @lavender !important;
+color: @base; /* Letra oscura para que contraste con el fondo morado */
+font-weight: bold;
 }
