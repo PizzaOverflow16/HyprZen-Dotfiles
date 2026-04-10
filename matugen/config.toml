@@ -2,13 +2,21 @@
 default_source_color = 0
 
 [templates.waybar_swaync]
-input_path = '/home/hyperZen/.config/matugen/templates/colors.css'
-output_path = '/home/hyperZen/.config/matugen/output/colors.css'
+input_path = '/home/elton/.config/matugen/templates/colors.css'
+output_path = '/home/elton/.config/matugen/output/colors.css'
 
 [templates.rofi]
-input_path = '/home/hyperZen/.config/matugen/templates/colors.rasi'
-output_path = '/home/hyperZen/.config/matugen/output/colors.rasi'
+input_path = '/home/elton/.config/matugen/templates/colors.rasi'
+output_path = '/home/elton/.config/matugen/output/colors.rasi'
 
 [templates.kitty]
-input_path = '/home/hyperZen/.config/matugen/templates/kitty-colors.conf'
-output_path = '/home/hyperZen/.config/matugen/output/kitty-colors.conf'
+input_path = '/home/elton/.config/matugen/templates/kitty-colors.conf'
+output_path = '/home/elton/.config/matugen/output/kitty-colors.conf'
+
+[templates.quickshell_tema]
+input_path = '/home/elton/.config/matugen/templates/Tema.qml'
+output_path = '/home/elton/dev/config/dotfiles/quickshell/QuickShellPrueba/Tema.qml'
+
+[templates.kwybars]
+input_path = "templates/kwybars.toml"
+output_path = "../kwybars/config.toml"

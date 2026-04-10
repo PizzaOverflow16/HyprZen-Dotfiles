@@ -27,7 +27,7 @@ map="
 󰒆  Super + L            ➜  Bloquear pantalla (Hyprlock)
 󰅍  Super + Z            ➜  Historial portapapeles (Cliphist)
 󰁨  Super + Shift + X    ➜  BORRAR historial de portapapeles
-󰄀  Super + Shift + E    ➜  Selector de Emojis (Bemoji)
+󰭻  Super + T            ➜  WhatsApp
 
 󰄀  --- CAPTURAS (HYPRSHOT) ---
 󰹑  Super + Shift + P    ➜  Captura Pantalla Completa
@@ -35,4 +35,4 @@ map="
 "
 
 # Lanzamos rofi con el estilo de tu carpeta personal
-echo -e "$map" | rofi -dmenu -i -p "󰌌 Guía de Atajos" -config /home/hyperZen/dev/config/dotfiles/rofi/config.rasi
+echo -e "$map" | rofi -dmenu -i -p "󰌌 Guía de Atajos" -config /home/elton/dev/config/dotfiles/rofi/config.rasi

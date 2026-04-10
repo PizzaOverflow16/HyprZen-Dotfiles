@@ -162,8 +162,9 @@
       "paused": "⏸"
     },
     "max-length": 40,
-    "on-click": "playerctl play-pause",
-    "on-click-right": "pkill -x quickshell || quickshell",
+    //"on-click": "pkill -x quickshell || quickshell",
+    "on-click": "bash -c 'pkill -x quickshell || env WIDGET=media quickshell'",
+    "on-click-right": "playerctl play-pause", 
     "on-click-middle": "playerctl previous"
   },
   "hyprland/window": {

@@ -6,7 +6,7 @@ configuration {
 }
 
 /* Rofi prefiere @theme en lugar de @import */
-@theme "/home/hyperZen/.config/matugen/output/colors.rasi"
+@theme "/home/elton/.config/matugen/output/colors.rasi"
 
 * {
     /* Inyectamos las variables dinámicas de Matugen */

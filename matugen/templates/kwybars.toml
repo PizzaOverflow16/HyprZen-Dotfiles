@@ -1,0 +1,36 @@
+[overlay]
+monitor_mode = "primary"
+layer = "bottom"
+position = "bottom"
+full_length = true
+height = 500
+anchor_margin = 20
+margin_left = 20
+margin_right = 20
+
+[visualizer]
+layout = "line"
+bar_corner_radius = 20
+bars = 50
+bar_width = 8
+gap = 20
+framerate = 60
+color_mode = "gradient"
+
+# Color Dominante: El terciario de Matugen (Alto contraste, 100% opacidad para el neón)
+color_rgba = "rgba({{colors.tertiary.default.red}}, {{colors.tertiary.default.green}}, {{colors.tertiary.default.blue}}, 1.0)"
+
+# Color Secundario: El primario de tu fondo (Para integrarse con el entorno)
+color2_rgba = "rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 1.0)"
+
+[daemon]
+enabled = true
+poll_interval_ms = 45
+activity_threshold = 0.015
+activate_delay_ms = 50
+deactivate_delay_ms = 2200
+stop_on_silence = true
+notify_on_error = true
+notify_cooldown_seconds = 45
+overlay_command = "kwybars-overlay"
+overlay_args = []

@@ -1,4 +1,4 @@
- /* 1. LA CAPA BASE (El único cristal morado del 85%) */
+/* 1. LA CAPA BASE (El único cristal morado del 85%) */
 
 window.background,
 
@@ -38,4 +38,5 @@ scrolledwindow, stack, flap,
 
 background-color: transparent;
 
-} 
+}
+@import 'colors.css';

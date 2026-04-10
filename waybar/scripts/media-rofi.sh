@@ -21,7 +21,7 @@ fi
 options="⏮\n$PLAY_PAUSE\n⏭"
 
 # Lanzar Rofi con el diseño que creamos
-chosen=$(echo -e "$options" | rofi -dmenu -i -p "🎵 $TITLE - $ARTIST" -theme /home/hyperZen/dev/config/dotfiles/rofi/mediaplayer.rasi)
+chosen=$(echo -e "$options" | rofi -dmenu -i -p "🎵 $TITLE - $ARTIST" -theme /home/elton/dev/config/dotfiles/rofi/mediaplayer.rasi)
 
 # Ejecutar la acción según el botón que presiones
 case "$chosen" in

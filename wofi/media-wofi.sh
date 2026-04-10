@@ -39,7 +39,7 @@ options="⏮  Anterior\n$PLAY_PAUSE\n⏭  Siguiente"
 
 # Ejecutar Wofi centrado arriba, justo debajo de la barra
 
-chosen=$(echo -e "$options" | wofi -d -p "🎵 $TITLE" --style /home/hyperZen/dev/config/dotfiles/wofi/media-style.css -W 350 -H 190 --location top --yoffset 60)
+chosen=$(echo -e "$options" | wofi -d -p "🎵 $TITLE" --style /home/elton/dev/config/dotfiles/wofi/media-style.css -W 350 -H 190 --location top --yoffset 60)
 
 
 # Ejecutar la acción según la opción elegida

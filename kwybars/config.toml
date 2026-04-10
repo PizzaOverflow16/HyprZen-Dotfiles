@@ -1,9 +1,6 @@
-# Example Kwybars config
-# If you do not create a config file, Kwybars already uses these built-in defaults
-
 [overlay]
 monitor_mode = "primary"
-layer = "background"
+layer = "bottom"
 position = "bottom"
 full_length = true
 height = 500
@@ -19,14 +16,18 @@ bar_width = 8
 gap = 20
 framerate = 60
 color_mode = "gradient"
-color_rgba = "rgba(175, 198, 255, 0.7)"
-color2_rgba = "rgba(191, 198, 220, 0.7)"
+
+# Color Dominante: El terciario de Matugen (Alto contraste, 100% opacidad para el neón)
+color_rgba = "rgba(218, 189, 226, 1.0)"
+
+# Color Secundario: El primario de tu fondo (Para integrarse con el entorno)
+color2_rgba = "rgba(166, 200, 255, 1.0)"
 
 [daemon]
 enabled = true
-poll_interval_ms = 90
-activity_threshold = 0.035
-activate_delay_ms = 180
+poll_interval_ms = 45
+activity_threshold = 0.015
+activate_delay_ms = 50
 deactivate_delay_ms = 2200
 stop_on_silence = true
 notify_on_error = true

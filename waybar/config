@@ -40,6 +40,6 @@
         "custom/power"
     ],
     "include": [
-        "/home/hyperZen/dev/config/dotfiles/waybar/pruebamodules.json"
+        "/home/elton/dev/config/dotfiles/waybar/modules.json"
     ]
 }
