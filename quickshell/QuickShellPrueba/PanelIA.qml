@@ -29,7 +29,7 @@ PanelWindow {
     }
 
     property bool cargando: false
-    property string apiKey: "AIzaSyC01t7c2hiUCBv0YD5nY9p9zHP2-3NIo4A" // <--- MANTÉN TU LLAVE AQUÍ
+    property string apiKey: "" // <--- MANTÉN TU LLAVE AQUÍ
 
     function enviarMensaje() {
         let texto = inputMensaje.text.trim();
